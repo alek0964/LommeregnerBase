@@ -39,7 +39,7 @@ actions.sortOnLength = {
 actions.totalAge = {
     types: [JSON.parse, JSON.parse, JSON.parse],
     function: function(alice, bob, cat){
-        return -1;
+        return alice.age + bob.age + cat.age;
     }
 };
 
@@ -47,7 +47,7 @@ actions.totalAge = {
 actions.averageAge = {
     types: [JSON.parse, JSON.parse, JSON.parse],
     function: function(alice, bob, cat){
-        return -1;
+        return (alice.age + bob.age + cat.age) / 3;
     }
 };
 
