@@ -67,7 +67,7 @@ actions.productVulnerability = {
 actions.vulnerability = {
  types: [JSON.parse, JSON.parse, JSON.parse],
  function: function(p1, p2, p3){
-
+    
  return [ -1, -1, -1];
  }
 };
