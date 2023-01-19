@@ -55,7 +55,11 @@ actions.averageAge = {
 actions.productVulnerability = {
  types: [Number, Number, Number],
  function: function(disruptive, irreplacible, damaging){
- return "Kritisk";
+    if ((disruptive + irreplacible + damaging)/3 <= 1) 
+        return "Ikke Kritisk";
+    else if ((disruptive + irreplacible + damaging)/3 <= 4)
+        return "Besværlig";
+    else return "Kritisk";
  }
 }
 // returns 'sårbarhed' of the three products in an array
